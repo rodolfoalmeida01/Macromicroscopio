@@ -10,6 +10,7 @@ library(cowplot)
 library(animation)
 library(ggforce)
 library(patchwork)
+library(scales)
 
 # Cria paleta de cor de climate stripes
 pal_strip <- c(
@@ -53,37 +54,33 @@ temperature <- temperature %>%
                    month=='nov' ~ 11,
                    month=='dec' ~ 12,))
 
-date <- as.Date(tiles$data$date)
+# Tirando a média anual para usar no climate stripes
+temperature_anual <- temperature %>% 
+  group_by(year) %>% summarise(value=mean(value))
 
-# Plotando
-temperature %>% 
-  filter(year >= 1954) %>% 
-  mutate(date = make_date(year, mes_index)) %>% 
-  ggplot() +
-  aes(x=date, y=1, fill=value) +
-  geom_tile() +
-  scale_fill_gradientn(colours = pal_strip) +
-  theme_void() +
-  transition_time(date) +
-  view_follow(fixed_y = TRUE) +
-  enter_fade() +
-  exit_fade() -> tiles
-
-ggplot(tiles, aes(x = 0, y = 0, width = 1, height = 1, fill = value)) +
-  geom_tile(color = "white") +
-  scale_fill_gradientn(colours = pal_strip) +
-  transition_time(date) +
-  labs(title = "Climate Stripes Animation") +
-  theme_void() +
-  view_follow(fixed_y = TRUE) +
-  enter_fade() +
-  exit_fade()
-
-temperature %>% 
+temperature_anual %>% 
   ggplot() +
   aes(x=year, y=1, fill=value) +
   geom_tile() +
   scale_fill_gradientn(colours = pal_strip)
+
+# Extrai a correspondência entre códigos de cor e valores de temperatura para handoff para desenvolvimento
+# Criando a paleta de cores para a visualização das bolinhas
+pal_strip <- c("#08306b", "#08519c", "#2171b5", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#deebf7", "#fee0d2", "#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#a50f15", "#67000d")
+
+# Rescale os valores de temperatura para o intervalo [0,1]
+temp_values <- rescale(temperature_anual$value)
+
+# Criar uma função de cores
+color_func <- grDevices::colorRampPalette(colors = pal_strip)
+
+# Mapear os valores de temperatura para as cores correspondentes na paleta de cores
+hex_codes <- color_func(length(temp_values))
+
+# Crie a tabela de correspondência
+correspondence_table <- data.frame(value = temperature_anual$value, 
+                                   hex_code = hex_codes, 
+                                   year = temperature_anual$year)
 
 # Trabalhando com dados do Living Planet Index --------------------------------------
 
@@ -124,13 +121,16 @@ selecionadas <- c(19301,
                   1162,
                   1565)
 
-# Prepara DF temperature, tira a média das medições mensais
+# Prepara DF temperature, tira a média das medições mensais, junta com os hexadecimais de cor
 temperature %>% 
   select(year, value) %>% 
   rename(temp_anomaly_celsius = value) %>% 
   filter(year >= 1950 & year <= 2020) %>%
   group_by(year) %>% 
   summarise(temp_anomaly_celsius=mean(temp_anomaly_celsius)) -> j_temperature
+
+left_join(j_temperature, correspondence_table, 'year') %>% 
+  select(year, temp_anomaly_celsius, hex_code) -> 
 
 # Prepara DF lpi_timetest e filtra espécies
 lpi_timetest %>% 
@@ -371,3 +371,30 @@ saveGIF({
 plots.dir.path <- list.files(tempdir(), pattern="rs-graphics", full.names = TRUE); 
 plots.png.paths <- list.files(plots.dir.path, pattern=".png", full.names = TRUE)
 file.copy(from=plots.png.paths, to="C:\\Users\\rodol\\OneDrive\\Desktop")
+
+# Plotando
+temperature %>% 
+  filter(year >= 1954) %>% 
+  mutate(date = make_date(year, mes_index)) %>% 
+  ggplot() +
+  aes(x=date, y=1, fill=value) +
+  geom_tile() +
+  scale_fill_gradientn(colours = pal_strip) +
+  theme_void() +
+  transition_time(date) +
+  view_follow(fixed_y = TRUE) +
+  enter_fade() +
+  exit_fade() -> tiles
+
+date <- as.Date(tiles$data$date)
+
+
+ggplot(tiles, aes(x = 0, y = 0, width = 1, height = 1, fill = value)) +
+  geom_tile(color = "white") +
+  scale_fill_gradientn(colours = pal_strip) +
+  transition_time(date) +
+  labs(title = "Climate Stripes Animation") +
+  theme_void() +
+  view_follow(fixed_y = TRUE) +
+  enter_fade() +
+  exit_fade()
