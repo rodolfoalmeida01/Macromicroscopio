@@ -101,25 +101,7 @@ lpi_timetest %>%
   summarise(timerange = sum(ano_preenchido))
 
 # Cria lista de espécies selecionadas dali a partir do ID (seleção feita manualmente considerando diversidade geográfica, de classe, métodos de população via indivíduos e grandes timeranges)
-selecionadas <- c(19301,
-                  2098,
-                  19313,
-                  25466,
-                  27918,
-                  19282,
-                  10392,
-                  27913,
-                  10734,
-                  1415,
-                  5425,
-                  6828,
-                  2092,
-                  8957,
-                  2037,
-                  7838,
-                  19528,
-                  1162,
-                  1565)
+selecionadas <- c(2092, 1415, 1565, 19301)
 
 # Prepara DF temperature, tira a média das medições mensais, junta com os hexadecimais de cor
 temperature %>% 
@@ -130,7 +112,7 @@ temperature %>%
   summarise(temp_anomaly_celsius=mean(temp_anomaly_celsius)) -> j_temperature
 
 left_join(j_temperature, correspondence_table, 'year') %>% 
-  select(year, temp_anomaly_celsius, hex_code) -> 
+  select(year, temp_anomaly_celsius, hex_code) -> j_temperature
 
 # Prepara DF lpi_timetest e filtra espécies
 lpi_timetest %>% 
