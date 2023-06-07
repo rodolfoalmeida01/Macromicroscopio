@@ -78,9 +78,10 @@ color_func <- grDevices::colorRampPalette(colors = pal_strip)
 hex_codes <- color_func(length(temp_values))
 
 # Crie a tabela de correspondência
-correspondence_table <- data.frame(value = temperature_anual$value, 
-                                   hex_code = hex_codes, 
-                                   year = temperature_anual$year)
+correspondence_table <- data.frame(year = temperature_anual$year,
+                                   value = temperature_anual$value, 
+                                   hex_code = hex_codes
+                                   ) 
 
 # Trabalhando com dados do Living Planet Index --------------------------------------
 
@@ -89,6 +90,7 @@ lpi <- read_csv("C:/Users/rodol/Downloads/LivingPlanetIndexDatabase_2023-03-27_2
 lpi <- lpi %>% 
   pivot_longer(33:103, names_to='ano')
 lpi$ano <- as.double(lpi$ano)
+lpi$Binomial <- str_replace_all(lpi$Binomial,"_", " ")
 
 # CICLO 3 ---------------------------------------------------------------------------
 
@@ -116,8 +118,8 @@ left_join(j_temperature, correspondence_table, 'year') %>%
 
 # Prepara DF lpi_timetest e filtra espécies
 lpi_timetest %>% 
-  select(ID, Common_name, Class, Method, Units, value, ano, Country) %>% 
-  rename(id = ID, common_name = Common_name, class = Class, method = Method, units = Units, population_count = value, year = ano, country=Country) %>% 
+  select(ID, Binomial, Common_name, Class, Method, Units, value, ano, Country) %>% 
+  rename(id = ID, name = Binomial, common_name = Common_name, class = Class, method = Method, units = Units, population_count = value, year = ano, country=Country) %>% 
   filter(id %in% selecionadas) -> j_lpi
 
 # Usa método de LOCF para preencher NAs que interrompem a série e remove os NAs das pontas
@@ -130,9 +132,11 @@ j_lpi <- j_lpi %>%
 # JUNTA DFs
 petri <- left_join(j_temperature, j_lpi, 'year')
 
-# Cria coluna com número de pontos
-petri <- petri %>% 
-  mutate(points = population_count/1000)
+# Faz normalização min-max com limite de 5000 pontos
+max_value <- max(petri$population_count)
+min_value <- min(petri$population_count)
+
+petri$Points <- (petri$population_count - min_value) / (max_value - min_value) * 5000
 
 # Cria uma checagem da diversidade geográfica entre as espécies selecionadas
 petri %>%
@@ -156,8 +160,26 @@ petri %>%
   geom_point() -> p
 ggplotly(p)
 
-# ESCREVE CSV
-write.csv(petri, 'petri_sample.csv')
+# REORGANIZA TABELA PARA ARIEL
+petri_untidy <-  petri %>% 
+  mutate(pop_year = paste("POP",year,sep=''), point_year = paste("POINT",year,sep='')) %>% 
+  select(name, common_name, year, population_count, pop_year, points, point_year) 
+
+petri_untidy_pop <- petri_untidy %>% 
+  pivot_wider(id_cols = c(name, common_name), names_from = pop_year, values_from = population_count)
+
+petri_untidy_point <- petri_untidy %>% 
+  pivot_wider(id_cols = c(name, common_name), names_from = point_year, values_from = points)
+
+left_join(petri_untidy_pop, petri_untidy_point, by=c('name','common_name')) -> petri_untidy
+
+# ESCREVE CSVs PARA ARIEL
+write.csv(petri_untidy, 'petri_sample.csv')
+write.csv(correspondence_table, 'temperaturas_cor.csv')
+
+
+
+
 
 
 
