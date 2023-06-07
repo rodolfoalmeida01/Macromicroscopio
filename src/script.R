@@ -79,7 +79,7 @@ hex_codes <- color_func(length(temp_values))
 
 # Crie a tabela de correspondência
 correspondence_table <- data.frame(year = temperature_anual$year,
-                                   value = temperature_anual$value, 
+                                   value = round(temperature_anual$value,2), 
                                    hex_code = hex_codes
                                    ) 
 
@@ -100,10 +100,25 @@ lpi %>%
                              TRUE ~ 1)) -> lpi_timetest
 lpi_timetest %>% 
   group_by(ID, Citation, Class, Common_name, Method, Country) %>% 
-  summarise(timerange = sum(ano_preenchido))
+  summarise(timerange = sum(ano_preenchido), populacao_mediana = median(value, na.rm=T))
 
 # Cria lista de espécies selecionadas dali a partir do ID (seleção feita manualmente considerando diversidade geográfica, de classe, métodos de população via indivíduos e grandes timeranges)
-selecionadas <- c(2092, 1415, 1565, 19301)
+selecionadas <- c(2092, 
+                  1415, 
+                  8957, 
+                  19301, 
+                  19129, 
+                  27913,
+                  10734,
+                  27735,
+                  7838,
+                  13304, 
+                  632,
+                  2037,
+                  5425,
+                  27919,
+                  2086
+)
 
 # Prepara DF temperature, tira a média das medições mensais, junta com os hexadecimais de cor
 temperature %>% 
@@ -136,11 +151,17 @@ petri <- left_join(j_temperature, j_lpi, 'year')
 max_value <- max(petri$population_count)
 min_value <- min(petri$population_count)
 
-petri$Points <- (petri$population_count - min_value) / (max_value - min_value) * 5000
+petri$points <- (petri$population_count - min_value) / (max_value - min_value) * 5000
+
+# Arredonda valores de indivíduos e de pontos
+petri <- petri %>% 
+  mutate(population_count = round(population_count, 0), points = round(points, 0))
+
+# CHECAGENS -------------------------------------------------------------------------
 
 # Cria uma checagem da diversidade geográfica entre as espécies selecionadas
 petri %>%
-  count(country, common_name, sort=T)
+  count(country, class, common_name, sort=T)
 
 # Cria uma checagem de métodos de coleta entre as espécies selecionadas
 petri %>%
@@ -159,6 +180,9 @@ petri %>%
   aes(x=year, y=population_count, color=common_name) +
   geom_point() -> p
 ggplotly(p)
+
+
+# PREPARANDO SAÍDE ------------------------------------------------------------------
 
 # REORGANIZA TABELA PARA ARIEL
 petri_untidy <-  petri %>% 
