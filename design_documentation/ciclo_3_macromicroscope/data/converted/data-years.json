@@ -1,0 +1,359 @@
+{
+  "data": [
+    {
+      "year": 1950,
+      "temperature": -0.17,
+      "color": "#EAE6E8"
+    },
+    {
+      "year": 1951,
+      "temperature": -0.07,
+      "color": "#EEE5E4"
+    },
+    {
+      "year": 1952,
+      "temperature": 0.01,
+      "color": "#F1E4E0"
+    },
+    {
+      "year": 1953,
+      "temperature": 0.08,
+      "color": "#F4E3DC"
+    },
+    {
+      "year": 1954,
+      "temperature": -0.13,
+      "color": "#F8E2D8"
+    },
+    {
+      "year": 1955,
+      "temperature": -0.14,
+      "color": "#FBE0D4"
+    },
+    {
+      "year": 1956,
+      "temperature": -0.19,
+      "color": "#FDDED0"
+    },
+    {
+      "year": 1957,
+      "temperature": 0.05,
+      "color": "#FDDBCB"
+    },
+    {
+      "year": 1958,
+      "temperature": 0.06,
+      "color": "#FDD7C6"
+    },
+    {
+      "year": 1959,
+      "temperature": 0.03,
+      "color": "#FDD3C1"
+    },
+    {
+      "year": 1960,
+      "temperature": -0.03,
+      "color": "#FDCFBB"
+    },
+    {
+      "year": 1961,
+      "temperature": 0.06,
+      "color": "#FCCBB6"
+    },
+    {
+      "year": 1962,
+      "temperature": 0.03,
+      "color": "#FCC7B1"
+    },
+    {
+      "year": 1963,
+      "temperature": 0.06,
+      "color": "#FCC3AC"
+    },
+    {
+      "year": 1964,
+      "temperature": -0.2,
+      "color": "#FCBFA7"
+    },
+    {
+      "year": 1965,
+      "temperature": -0.11,
+      "color": "#FCBBA2"
+    },
+    {
+      "year": 1966,
+      "temperature": -0.06,
+      "color": "#FCB79D"
+    },
+    {
+      "year": 1967,
+      "temperature": -0.02,
+      "color": "#FCB398"
+    },
+    {
+      "year": 1968,
+      "temperature": -0.08,
+      "color": "#FCAE93"
+    },
+    {
+      "year": 1969,
+      "temperature": 0.05,
+      "color": "#FCAA8E"
+    },
+    {
+      "year": 1970,
+      "temperature": 0.03,
+      "color": "#FCA689"
+    },
+    {
+      "year": 1971,
+      "temperature": -0.08,
+      "color": "#FCA184"
+    },
+    {
+      "year": 1972,
+      "temperature": 0.01,
+      "color": "#FC9D7F"
+    },
+    {
+      "year": 1973,
+      "temperature": 0.16,
+      "color": "#FC997A"
+    },
+    {
+      "year": 1974,
+      "temperature": -0.07,
+      "color": "#FC9475"
+    },
+    {
+      "year": 1975,
+      "temperature": -0.01,
+      "color": "#FB9070"
+    },
+    {
+      "year": 1976,
+      "temperature": -0.1,
+      "color": "#FB8C6C"
+    },
+    {
+      "year": 1977,
+      "temperature": 0.18,
+      "color": "#FB8868"
+    },
+    {
+      "year": 1978,
+      "temperature": 0.07,
+      "color": "#FB8363"
+    },
+    {
+      "year": 1979,
+      "temperature": 0.16,
+      "color": "#FB7F5F"
+    },
+    {
+      "year": 1980,
+      "temperature": 0.26,
+      "color": "#FB7B5B"
+    },
+    {
+      "year": 1981,
+      "temperature": 0.32,
+      "color": "#FB7757"
+    },
+    {
+      "year": 1982,
+      "temperature": 0.14,
+      "color": "#FB7353"
+    },
+    {
+      "year": 1983,
+      "temperature": 0.31,
+      "color": "#FB6E4E"
+    },
+    {
+      "year": 1984,
+      "temperature": 0.16,
+      "color": "#FB6A4A"
+    },
+    {
+      "year": 1985,
+      "temperature": 0.12,
+      "color": "#F96547"
+    },
+    {
+      "year": 1986,
+      "temperature": 0.18,
+      "color": "#F86044"
+    },
+    {
+      "year": 1987,
+      "temperature": 0.32,
+      "color": "#F75B40"
+    },
+    {
+      "year": 1988,
+      "temperature": 0.39,
+      "color": "#F6563D"
+    },
+    {
+      "year": 1989,
+      "temperature": 0.27,
+      "color": "#F4513A"
+    },
+    {
+      "year": 1990,
+      "temperature": 0.45,
+      "color": "#F34C37"
+    },
+    {
+      "year": 1991,
+      "temperature": 0.41,
+      "color": "#F24734"
+    },
+    {
+      "year": 1992,
+      "temperature": 0.22,
+      "color": "#F14231"
+    },
+    {
+      "year": 1993,
+      "temperature": 0.23,
+      "color": "#EF3D2D"
+    },
+    {
+      "year": 1994,
+      "temperature": 0.32,
+      "color": "#ED392B"
+    },
+    {
+      "year": 1995,
+      "temperature": 0.45,
+      "color": "#E93529"
+    },
+    {
+      "year": 1996,
+      "temperature": 0.33,
+      "color": "#E53228"
+    },
+    {
+      "year": 1997,
+      "temperature": 0.46,
+      "color": "#E22E26"
+    },
+    {
+      "year": 1998,
+      "temperature": 0.61,
+      "color": "#DE2A25"
+    },
+    {
+      "year": 1999,
+      "temperature": 0.38,
+      "color": "#DA2723"
+    },
+    {
+      "year": 2000,
+      "temperature": 0.39,
+      "color": "#D62321"
+    },
+    {
+      "year": 2001,
+      "temperature": 0.54,
+      "color": "#D21F20"
+    },
+    {
+      "year": 2002,
+      "temperature": 0.63,
+      "color": "#CF1B1E"
+    },
+    {
+      "year": 2003,
+      "temperature": 0.62,
+      "color": "#CB181D"
+    },
+    {
+      "year": 2004,
+      "temperature": 0.54,
+      "color": "#C7171C"
+    },
+    {
+      "year": 2005,
+      "temperature": 0.68,
+      "color": "#C3161B"
+    },
+    {
+      "year": 2006,
+      "temperature": 0.64,
+      "color": "#BF151A"
+    },
+    {
+      "year": 2007,
+      "temperature": 0.67,
+      "color": "#BB1419"
+    },
+    {
+      "year": 2008,
+      "temperature": 0.54,
+      "color": "#B71318"
+    },
+    {
+      "year": 2009,
+      "temperature": 0.66,
+      "color": "#B31217"
+    },
+    {
+      "year": 2010,
+      "temperature": 0.72,
+      "color": "#AF1117"
+    },
+    {
+      "year": 2011,
+      "temperature": 0.61,
+      "color": "#AB1016"
+    },
+    {
+      "year": 2012,
+      "temperature": 0.65,
+      "color": "#A70F15"
+    },
+    {
+      "year": 2013,
+      "temperature": 0.68,
+      "color": "#A10E14"
+    },
+    {
+      "year": 2014,
+      "temperature": 0.75,
+      "color": "#9B0C13"
+    },
+    {
+      "year": 2015,
+      "temperature": 0.9,
+      "color": "#940B12"
+    },
+    {
+      "year": 2016,
+      "temperature": 1.02,
+      "color": "#8E0912"
+    },
+    {
+      "year": 2017,
+      "temperature": 0.92,
+      "color": "#870711"
+    },
+    {
+      "year": 2018,
+      "temperature": 0.85,
+      "color": "#810610"
+    },
+    {
+      "year": 2019,
+      "temperature": 0.98,
+      "color": "#7A040F"
+    },
+    {
+      "year": 2020,
+      "temperature": 1.02,
+      "color": "#74030E"
+    },
+  ]
+}

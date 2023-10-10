@@ -1,0 +1,72 @@
+HAGRID,Kingdom,Phylum,Class,Order,Family,Genus,Species,Common name,Humano médio (79) vive quantos % disso?,Maximum longevity (yrs),Female maturity (days),Male maturity (days),Gestation/Incubation (days),Weaning (days),Litter/Clutch size,Litters/Clutches per year,Inter-litter/Interbirth interval,Birth weight (g),Weaning weight (g),Adult weight (g),Growth rate (1/days),Source,Specimen origin,Sample size,Data quality,IMR (per yr),MRDT (yrs),Metabolic rate (W),Body mass (g),Temperature (K),References
+4239,Animalia,Porifera,Hexactinellida,Lyssacinosida,Rossellidae,Scolymastra,joubini,Hexactinellid sponge,0.49%,15000,,,,,,,,,,,,688,wild,medium,questionable,,,,,,688
+4241,Plantae,Pinophyta,Pinopsida,Pinales,Pinaceae,Pinus,longaeva,Great Basin bristlecone pine,1.44%,5062,,,,,,,,,,,,1289,wild,medium,acceptable,,999,,,,"5,017,101,289"
+4238,Animalia,Porifera,Demospongiae,Spirophorida,Tetillidae,Cinachyra,antarctica,Epibenthic sponge,4.71%,1550,,,,,,,,,,,,688,wild,medium,questionable,,,,,,688
+4235,Animalia,Mollusca,Bivalvia,Veneroida,Arcticidae,Arctica,islandica,Ocean quahog clam,14.40%,507,4562,4780,,,,,,,,,,1086,wild,medium,acceptable,,999,,,,"2,14,593,829,893,1085,1086,1095,1098,1162,1163,1164,1165,1226"
+1507,Animalia,Chordata,Chondrichthyes,Squaliformes,Somniosidae,Somniosus,microcephalus,Greenland shark,18.62%,392,56940,,,,,,,,,,,1153,wild,small,acceptable,,,,,,"11,531,154"
+1928,Animalia,Chordata,Mammalia,Cetacea,Balaenidae,Balaena,mysticetus,Bowhead whale,34.60%,211,8212,8212,396,365,1,0.3,1642,900000,,100000000,,21,wild,medium,acceptable,,,,,,"21,49,434,447,455,538,610,680,890,978,1136"
+4131,Animalia,Chordata,Teleostei,Scorpaeniformes,Scorpaenidae,Sebastes,aleutianus,Rougheye rockfish,35.61%,205,,,,,,,,,,495,,22,wild,medium,acceptable,0.05,999,,,,"2,22,454,472"
+4232,Animalia,Echinodermata,Echinoidea,Echinoida,Strongylocentrotidae,Strongylocentrotus,franciscanus,Red sea urchin,36.50%,200,550,550,,,,,,,,,,40,wild,medium,acceptable,,999,,,,"40,591,833,959,1224,1225,1234,1235"
+3399,Animalia,Chordata,Reptilia,Testudines,Testudinidae,Chelonoidis,nigra,Galapagos tortoise,41.24%,177,,,,,,,,,,,,451,captivity,medium,acceptable,,,,,,"13,14,451,543,1171"
+4136,Animalia,Chordata,Teleostei,Scorpaeniformes,Scorpaenidae,Sebastes,borealis,Shortraker rockfish,46.50%,157,,,,,,,,,,8910,,22,wild,medium,acceptable,,,,,,"22,454"
+1520,Animalia,Chordata,Chondrostei,Acipenseriformes,Acipenseridae,Acipenser,fulvescens,Lake sturgeon,48.03%,152,9490,2920,6,,350000,,,,,70000,,1,wild,medium,acceptable,0.013,10,,,,"1,2,440,454,524"
+3394,Animalia,Chordata,Reptilia,Testudines,Testudinidae,Aldabrachelys,gigantea,Aldabra tortoise,48.03%,152,,,,,,,,,,,,527,captivity,large,acceptable,,,,,,"2,14,527"
+3444,Animalia,Chordata,Teleostei,Beryciformes,Trachichthyidae,Hoplostethus,atlanticus,Orange roughy,48.99%,149,6448,7208,,,,,,,,3850,,454,wild,medium,acceptable,,,,,,"22,454"
+4225,Animalia,Chordata,Teleostei,Zeiformes,Oreosomatidae,Allocyttus,verrucosus,Warty oreo,52.14%,140,,,,,,,,,,1100,,22,wild,medium,acceptable,,,,,,"22,454"
+3340,Animalia,Chordata,Reptilia,Testudines,Emydidae,Terrapene,carolina,Eastern box turtle,52.90%,138,2190,2190,,,,,,,,,,543,wild,medium,acceptable,,999,,,,"26,64,468,528,543"
+3412,Animalia,Chordata,Reptilia,Testudines,Testudinidae,Testudo,graeca,Mediterranean spur-thighed tortoise,57.48%,127,4560,4560,,,,,,,,,,451,captivity,large,acceptable,,,,,,"451,527"
+3326,Animalia,Chordata,Reptilia,Testudines,Emydidae,Emys,orbicularis,European pond turtle,60.83%,120,,,,,,,,,,,,527,captivity,medium,acceptable,,,,,,527
+1529,Animalia,Chordata,Chondrostei,Acipenseriformes,Acipenseridae,Huso,huso,Beluga sturgeon,61.86%,118,6387,4745,,,,,,,,1139600,,1,wild,medium,acceptable,,,,,,"1,454"
+4171,Animalia,Chordata,Teleostei,Scorpaeniformes,Scorpaenidae,Sebastes,ruberrimus,Rasphead rockfish,61.86%,118,4927,4927,,,,,,,,9790,,22,wild,medium,acceptable,,,,,,"22,454"
+4161,Animalia,Chordata,Teleostei,Scorpaeniformes,Scorpaenidae,Sebastes,nigrocinctus,Tiger rockfish,62.93%,116,,,,,,,,,,1221,,22,wild,medium,acceptable,,,,,,"22,454"
+4180,Animalia,Chordata,Teleostei,Scorpaeniformes,Scorpaenidae,Sebastolobus,alascanus,Shortspine thornyhead,63.48%,115,,,,,,,,,,1270.5,,22,wild,medium,acceptable,,,,,,"22,454"
+1935,Animalia,Chordata,Mammalia,Cetacea,Balaenopteridae,Balaenoptera,physalus,Fin whale,64.04%,114,2701,2864,342,183,1,0.4,608,1800000,,70000000,,434,wild,medium,acceptable,,,,,,"434,455,538,610,680"
+4110,Animalia,Chordata,Teleostei,Scorpaeniformes,Anoplopomatidae,Anoplopoma,fimbria,Sablefish,64.04%,114,2190,,,,,,,,,31350,,22,wild,medium,acceptable,,,,,,"22,454"
+1934,Animalia,Chordata,Mammalia,Cetacea,Balaenopteridae,Balaenoptera,musculus,Blue whale,66.36%,110,1827,1827,350,182,1,0.4,914,2000000,17000000,136000000,,1,wild,medium,acceptable,,,,,,"1,434,441,455,538,610,680"
+4135,Animalia,Chordata,Teleostei,Scorpaeniformes,Scorpaenidae,Sebastes,babcocki,Redbanded rockfish,68.87%,106,,,,,,,,,,2442,,22,wild,medium,acceptable,,,,,,"22,454"
+1527,Animalia,Chordata,Chondrostei,Acipenseriformes,Acipenseridae,Acipenser,transmontanus,White sturgeon,70.19%,104,8212,6022,,,,,,,,448800,,22,wild,medium,acceptable,,,,,,"22,454"
+3794,Animalia,Chordata,Teleostei,Perciformes,Epigonidae,Epigonus,telescopus,Telescope cardinal,70.19%,104,,,,,,,,,,,,22,wild,medium,acceptable,,,,,,"22,454"
+161,Animalia,Chordata,Amphibia,Caudata,Proteidae,Proteus,anguinus,Olm,71.57%,102,4124,,133,,35,,4562,,,17,,934,wild,medium,acceptable,,999,,,,"485,749,934"
+12,Animalia,Arthropoda,Malacostraca,Decapoda,Nephropidae,Homarus,americanus,American lobster,73.00%,100,,,,,,,,,,,,2,wild,medium,acceptable,,,,,,"2,13,594"
+1519,Animalia,Chordata,Chondrostei,Acipenseriformes,Acipenseridae,Acipenser,dabryanus,Yangtze sturgeon,73.00%,100,,,,,,,,,,,,454,wild,medium,acceptable,,,,,,454
+1526,Animalia,Chordata,Chondrostei,Acipenseriformes,Acipenseridae,Acipenser,sturio,European sturgeon,73.00%,100,4608,3467,,,,,,,,220000,,454,wild,medium,acceptable,,,,,,454
+4132,Animalia,Chordata,Teleostei,Scorpaeniformes,Scorpaenidae,Sebastes,alutus,Pacific ocean perch,73.00%,100,3169,3833,,,,,,,,770,,22,wild,medium,acceptable,,,,,,"2,22,454,472,585"
+4224,Animalia,Chordata,Teleostei,Zeiformes,Oreosomatidae,Allocyttus,niger,Black oreo,73.00%,100,9855,9855,,,,,,,,825,,454,wild,medium,acceptable,,,,,,454
+4226,Animalia,Chordata,Teleostei,Zeiformes,Oreosomatidae,Neocyttus,rhomboidalis,Spiky oreo,73.00%,100,,,,,,,,,,1100,,454,wild,medium,acceptable,,,,,,454
+4227,Animalia,Chordata,Teleostei,Zeiformes,Oreosomatidae,Pseudocyttus,maculatus,Smooth oreo,73.00%,100,11315,,,,,,,,,2750,,454,wild,medium,acceptable,,,,,,454
+4168,Animalia,Chordata,Teleostei,Scorpaeniformes,Scorpaenidae,Sebastes,reedi,Yellowmouth rockfish,73.74%,99,,,,,,,,,,,,22,wild,medium,acceptable,,,,,,"22,454"
+1936,Animalia,Chordata,Mammalia,Cetacea,Balaenopteridae,Megaptera,novaeangliae,Humpback whale,76.84%,95,1643,1643,342,236,1,0.5,657,1350000,,30000000,,573,wild,medium,acceptable,,,,,309.15,"434,455,538,573,610,680,1044,1175"
+1947,Animalia,Chordata,Mammalia,Cetacea,Delphinidae,Orcinus,orca,Killer whale,81.11%,90,3780,4930,435,471,1,0.2,1096,180000,,3987500,,784,wild,medium,acceptable,,14,,,309.15,"434,443,455,538,573,610,671,784,914,963,1065,1092,1143,1150,1158,1159,1223,1268"
+1971,Animalia,Chordata,Mammalia,Cetacea,Physeteridae,Physeter,macrocephalus,Sperm whale,94.81%,77,2922,3650,502,560,1,0.2,1259,1000000,,28500000,,1,wild,medium,acceptable,,,,,,"1,434,447,455,538,610,680,817,963,978"
+1524,Animalia,Chordata,Chondrostei,Acipenseriformes,Acipenseridae,Acipenser,schrenckii,Amur sturgeon,121.67%,60,4562,3285,,,,,,,,104500,,454,wild,medium,acceptable,,,,,,454
+1232,Animalia,Chordata,Aves,Psittaciformes,Psittacidae,Coracopsis,vasa,Vasa parrot,135.44%,53.9,,,,,,,,,,525,,669,captivity,medium,acceptable,,,,,,"669,820"
+2310,Animalia,Chordata,Mammalia,Primates,Atelidae,Ateles,fusciceps,Brown-headed spider monkey,158.70%,46,1515,1826,227,410,1,0.5,882,400,,7000,,671,captivity,large,acceptable,,,,,,"434,436,455,467,610,671,679,680,681"
+485,Animalia,Chordata,Aves,Charadriiformes,Stercorariidae,Stercorarius,skua,Great skua,211.59%,34.5,2190,2190,,,,,,,,1340,0.156,450,wild,medium,acceptable,,,,,,"450,729,732,820,1143"
+404,Animalia,Chordata,Aves,Charadriiformes,Laridae,Larus,delawarensis,Ring-billed gull,229.56%,31.8,730,730,21,,3,1,,36.3,,518.5,,1,wild,medium,acceptable,,,2.91742,439,,"1,425,444,445,820,1143"
+4153,Animalia,Chordata,Teleostei,Scorpaeniformes,Scorpaenidae,Sebastes,jordani,Shortbelly rockfish,235.48%,31,,,,,,,,,,,,22,wild,medium,acceptable,,,,,,"22,454"
+3703,Animalia,Chordata,Teleostei,Ophidiiformes,Ophidiidae,Genypterus,blacodes,Australian rockling,243.33%,30,,,,,,,,,,13750,,454,wild,medium,acceptable,,,,,,454
+1347,Animalia,Chordata,Aves,Strigiformes,Strigidae,Bubo,virginianus,Great horned owl,251.72%,29,730,730,27,,3,1,,34.7,,1191.2,0.138,427,wild,medium,acceptable,,,5.2442,1450,,"427,435,437,444,445,732,820,1148"
+3343,Animalia,Chordata,Reptilia,Testudines,Emydidae,Terrapene,ornata,Ornate box turtle,257.04%,28.4,2920,2920,63,,5,,,,,,,451,captivity,medium,acceptable,,,,,,"451,468"
+1222,Animalia,Chordata,Aves,Psittaciformes,Psittacidae,Callocephalon,fimbriatum,Gang-gang cockatoo,265.45%,27.5,,,,,,,,,,256,,669,captivity,medium,acceptable,,,,,,"669,820,979"
+119,Animalia,Chordata,Amphibia,Caudata,Amphiumidae,Amphiuma,means,Two-toed amphiuma,270.37%,27,1460,1095,150,,200,,,,,200.967,,485,captivity,small,acceptable,,,0.00904,199,288,"37,485,749"
+2469,Animalia,Chordata,Mammalia,Primates,Pitheciidae,Plecturocebus,moloch,Dusky titi,278.63%,26.2,912,,163,244,1,1,365,86,,804,,671,captivity,tiny,acceptable,,,,,,"434,455,467,671,1142"
+3995,Animalia,Chordata,Teleostei,Perciformes,Serranidae,Cephalopholis,miniata,Bluespot rockcod,292.00%,25,,,,,,,,,,,,454,wild,medium,acceptable,,,,,,454
+1314,Animalia,Chordata,Aves,Psittaciformes,Psittacidae,Psitteuteles,iris,Iris lorikeet,302.90%,24.1,,,,,,,,,,,,669,captivity,small,acceptable,,,,,,"669,979"
+191,Animalia,Chordata,Aves,Accipitriformes,Accipitridae,Accipiter,gentilis,Northern goshawk,331.82%,22,365,730,33,,3,1,,,,1044.2,0.225,450,wild,medium,acceptable,,,,,,"437,444,445,450,729,732,1143"
+3332,Animalia,Chordata,Reptilia,Testudines,Emydidae,Graptemys,nigrinoda,Black-knobbed map turtle,359.61%,20.3,,,,,,,,,,,,451,captivity,small,acceptable,,,,,,451
+1205,Animalia,Chordata,Aves,Psittaciformes,Psittacidae,Brotogeris,chiriri,Yellow-chevroned parakeet,384.21%,19,,,26,,5,,,,,61.6,,669,captivity,small,acceptable,,,,,,"445,669"
+206,Animalia,Chordata,Aves,Accipitriformes,Accipitridae,Buteo,lagopus,Rough-legged hawk,388.30%,18.8,730,730,29,,5,1,,41.62,,980.64,,450,wild,small,acceptable,,,,,,"437,444,445,450"
+208,Animalia,Chordata,Aves,Accipitriformes,Accipitridae,Buteo,platypterus,Broad-winged hawk,398.91%,18.3,365,365,25,,2.5,1,,28,,454,0.271,577,wild,small,acceptable,,,,,,"444,445,577,732"
+869,Animalia,Chordata,Aves,Passeriformes,Oriolidae,Sphecotheres,viridis,Green figbird (hang-nest),405.56%,18,,,,,,,,,,121.5,,575,captivity,medium,acceptable,,,,,,"575,820"
+3362,Animalia,Chordata,Reptilia,Testudines,Geoemydidae,Mauremys,nigricans,Red-necked pond turtle,405.56%,18,,,,,,,,,,,,451,captivity,small,acceptable,,,,,,451
+1071,Animalia,Chordata,Aves,Pelecaniformes,Threskiornithidae,Platalea,alba,African spoonbill,407.82%,17.9,,,,,,,,,,1521,,649,captivity,small,acceptable,,,,,,"649,820"
+2317,Animalia,Chordata,Mammalia,Primates,Callitrichidae,Callithrix,geoffroyi,Geoffroy's marmoset,414.77%,17.6,,,,,,,,,,342,,671,captivity,large,acceptable,,,,,,"6,717,301,142"
+128,Animalia,Chordata,Amphibia,Caudata,Hynobiidae,Onychodactylus,fischeri,Long-tailed clawed salamander,429.41%,17,,,,,,,,,,,,525,wild,medium,acceptable,,,,,,525
+3056,Animalia,Chordata,Reptilia,Squamata,Dactyloidae,Anolis,equestris,Knight anole,442.42%,16.5,,,,,,,,,,,,485,captivity,medium,acceptable,,,,,,485
+2924,Animalia,Chordata,Reptilia,Squamata,Anguidae,Ophisaurus,ventralis,Eastern glass lizard,493.24%,14.8,,,,,,,,,,,,451,captivity,small,acceptable,,,,,,451
+151,Animalia,Chordata,Amphibia,Caudata,Plethodontidae,Plethodon,elongatus,Del Norte salamander,548.87%,13.3,,,,,7,,,,,,,485,captivity,small,acceptable,,,,,,"485,749"
+2819,Animalia,Chordata,Mammalia,Rodentia,Sciuridae,Tamias,townsendii,Townsend's chipmunk,784.95%,9.3,353,,28,50,4.5,1,,3.5,35,75,0.0333,671,captivity,small,acceptable,,,,,,"434,455,610,671,680,731"
+79,Animalia,Chordata,Amphibia,Anura,Microhylidae,Microhyla,ornata,Ornate narrow-mouthed frog,1460.00%,5,547,182,,,,,,1125,,,,964,wild,small,acceptable,,,,,,964
+5,Animalia,Arthropoda,Insecta,Diptera,Drosophilidae,Drosophila,melanogaster,Fruit fly,24333.33%,0.3,7,7,,,,,,,,,,,captivity,large,acceptable,0.05,0.04,,,,"2,20,32,47,53,68,69,240,241,242,243,274,602,981,1150"
+4237,Animalia,Nematoda,Chromadorea,Rhabditida,Rhabditidae,Caenorhabditis,elegans,Roundworm,45625.00%,0.16,3,3,,,,,,,,,,,captivity,large,acceptable,2,0.04,,,,"2,16,46,52,53,66,67,69,273,274,275,276,277,278,279,280,281,337,592,714,745,981,982,1150,1242,1279"
+2424,Animalia,Chordata,Mammalia,Primates,Hominidae,Homo,sapiens,Human,59.59%,122.5,4745,5110,280,639,1,0.3,639,3312.5,11750,62035,0.0005,29,captivity,huge,high,0.0002,8,82.78,70000,310.15,"2,13,14,29,30,31,36,58,59,65,75,76,110,111,121,125,134,189,217,253,254,255,256,325,331,405,434,436,455,465,467,607,715,731,742,798,841,899,975,976,981,1078,1103,1122,1123,1136,1150,1242,1274"
