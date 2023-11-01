@@ -69,6 +69,8 @@ temperature_anual %>%
 pal_strip <- c("#08306b", "#08519c", "#2171b5", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#deebf7", "#fee0d2", "#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#a50f15", "#67000d")
 
 # Rescale os valores de temperatura para o intervalo [0,1]
+temperature_anual %>% 
+  filter(year>=1950) -> temperature_anual
 temp_values <- rescale(temperature_anual$value)
 
 # Criar uma função de cores
