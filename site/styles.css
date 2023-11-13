@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #000;
+  margin: 0;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100svh;
+  min-height: 100vh;
+}
+
+.content {
+  aspect-ratio: 16/9;
+  position: relative;
+  width: 100%;
+}
+
+iframe {
+  border: 0px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .content {
+    height: 100svh;
+    width: auto;
+  }
+}
