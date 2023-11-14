@@ -21,6 +21,7 @@ main {
 
 .content {
   aspect-ratio: 16/9;
+  margin: 50px;
   position: relative;
   width: 100%;
 }
@@ -32,9 +33,9 @@ iframe {
   width: 100%;
 }
 
-@media (min-aspect-ratio: 16/9) {
+@media (min-aspect-ratio: 1680/1000) {
   .content {
-    height: 100svh;
+    height: calc(100svh - 100px);
     width: auto;
   }
 }
