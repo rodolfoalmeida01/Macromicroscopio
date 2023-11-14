@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+
+/* Commons */
 html {
   box-sizing: border-box;
 }
@@ -7,10 +10,31 @@ html {
 }
 
 body {
-  background-color: #000;
+  background-color: #000000;
   margin: 0;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Typography */
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Instrument Serif", serif;
+}
+
+a {
+  color: inherit;
+}
+
+/* Layout */
 main {
   align-items: center;
   display: flex;
@@ -19,6 +43,7 @@ main {
   min-height: 100vh;
 }
 
+/* Main content */
 .content {
   aspect-ratio: 16/9;
   margin: 50px;
@@ -33,6 +58,12 @@ iframe {
   width: 100%;
 }
 
+/* Modals */
+.modal-open {
+  position: relative;
+}
+
+/* Adjust content sizing */
 @media (min-aspect-ratio: 1680/1000) {
   .content {
     height: calc(100svh - 100px);

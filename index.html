@@ -5,17 +5,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Macromicroscope</title>
 
-    <link rel="stylesheet" href="site/styles.css" />
+    <link rel="stylesheet" href="site/css/micromodal.css" />
+    <link rel="stylesheet" href="site/css/styles.css" />
   </head>
   <body>
     <main>
       <div class="content">
         <!-- Intro -->
-        <div id="intro">
+        <!-- <div id="intro">
           <p>INTRO</p>
-        </div>
+        </div> -->
+        <!-- <iframe src=""></iframe> -->
         <iframe src="https://cables.gl/view/650c9c83164dd3ab8b4d02da"></iframe>
+
+        <button data-micromodal-trigger="modal-1" class="modal-open">
+          What am I looking at?
+        </button>
+        <button data-micromodal-trigger="modal-2" class="modal-open">
+          About
+        </button>
       </div>
     </main>
+
+    <!-- MODAL What am I looking at? -->
+    <div id="modal-1" class="modal micromodal-slide" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">
+              What am I looking at?
+            </h2>
+          </header>
+
+          <div class="modal__content" id="modal-1-content">
+            <img src="site/assets/what1.png" height="470" width="580" />
+            <p>
+              In the face of climate change and the dawn of the Anthropocene, we
+              as humans are constantly challenged to reflect on our impact over
+              our planet and to perceive the interconnections among the many
+              forms of life that inhabit it. Recently, ideas such as the concept
+              of hyperobject, defined by philosopher Timothy Morton as an entity
+              that is challenging to visualize due to its scale (whether too
+              large or too small, or both) have shed light on the need to
+              transcend the narrow human scale to counteract the climate crisis.
+            </p>
+
+            <p>
+              <strong>Macromicroscopio</strong> is an art installation project
+              that provokes us to readjust our gaze and expand it across
+              different temporal and spatial scales through data visualization.
+              Drawing from biodiversity data within the
+              <a href="#" rel="noopener noreferrer">Living Planet Index</a>
+              database we visualize the population numbers of different species
+              that cohabit this planet over time, while simultaneously
+              displaying
+              <a href="#" rel="noopener noreferrer">NASA's</a> surface
+              temperature anomaly data from 1950 to 2020.
+            </p>
+
+            <p>
+              Through the representation of entire populations of animal species
+              as animated points with random movements, we allude to the imagery
+              of petri dishes — symbols of the unseen small, now utilized to
+              visualize the vastness that eludes our immediate perception.
+              Concurrently, by visualizing the temperature data through the
+              color tonality of the image, we metaphorically portray an
+              environment under warming conditions where diverse life forms are
+              affected by human impact.
+            </p>
+
+            <img src="site/assets/what2.png" height="295" width="575" />
+
+            <p>
+              While the project invites viewers to expand their spatial scale
+              perception through the petri dish metaphor, the extended duration
+              of the animation encourages temporal scale dilation. We invite
+              spectators to immerse in the hypnotic motion, to observe the loss
+              in biodiversity over the years, and to ponder the potential
+              correlations between the many data points visualized.
+            </p>
+            <p>
+              Through this experience, we hope spectators may lose sight of the
+              gradual and subtle shifts in hue — the transformation from cool
+              blues to intense fiery reds that denote the slow-burning process
+              of climate change.
+            </p>
+
+            <p>
+              Thus, we employ data visualization, a critical technology for
+              diagnosing the climate crisis, not to communicate immediate
+              decision-making data but to challenge our perception of our place
+              on the planet, the impacts of our actions, and to suggest an
+              understanding of ecological entanglement among life forms.
+            </p>
+
+            <p>
+              <strong>Macromicroscopio</strong> aims to ignite a deepened
+              awareness of the interconnectedness of living creatures in our
+              ecosystem, to inspire reflection and promote a greater
+              understanding of the profound effects of our actions on the world
+              around us and the role data visualization may play in this
+              scenario.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL About -->
+    <div id="modal-2" class="modal micromodal-slide" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-2-title"
+        >
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-2-title">About</h2>
+          </header>
+
+          <div class="modal__content" id="modal-2-content">
+            <p>
+              <strong>Macromicroscopio</strong> is the final dissertation
+              project of
+              <a href="" rel="noopener noreferrer">Rodolfo Almeida</a>,
+              developed in 2023 under supervision from
+              <a href="" rel="noopener noreferrer">Dr. Doris Kosminsky</a> and
+              in collaboration with developers
+              <a href="" rel="noopener noreferrer">Ariel Tonglet</a> and
+              <a href="" rel="noopener noreferrer">Eduardo Maluf de Campos</a>.
+            </p>
+
+            <p>
+              It is part of the research
+              <a href="" rel="noopener noreferrer">
+                It is part of the research “Visualizing the Unimaginable:
+                hyperobjects and data visualization on the Anthropocene” It is
+                part of the research </a
+              >, conducted at the
+              <a href="" rel="noopener noreferrer">LabVis</a> laboratory, for
+              the Post-Graduation Program in Design (PPGD) of the School of Fine
+              Arts (EBA) of the Federal University of Rio de Janeiro (UFRJ).
+            </p>
+
+            <p>
+              This video installation was shown at the Information XYZ
+              exhibition, as a part of the
+              <a href="" rel="noopener noreferrer">Information+ Conference</a>,
+              which took place in November 2023 at
+              <a href="" rel="noopener noreferrer">Inspace</a>, a part of the
+              Institute of Design Informatics within the University of
+              Edinburgh, Scotland.
+            </p>
+
+            <p>
+              This visualization was created in
+              <a href="" rel="noopener noreferrer">Cables.gl</a> with data
+              wrangling and analysis done in R stats. Code available at this
+              GitHub <a href="" rel="noopener noreferrer">repository</a>.
+            </p>
+
+            <p>
+              This project is purely educational and has no commercial purpose.
+              If you’d like to talk about, feel free to reach out at
+              rodolfoalmd@gmail.com!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script src="https://unpkg.com/micromodal@0.4.10/dist/micromodal.min.js"></script>
+  <script src="site/js/app.js"></script>
 </html>
