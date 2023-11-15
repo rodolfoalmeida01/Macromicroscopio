@@ -6,6 +6,8 @@
   display: none;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  position: fixed;
+  z-index: 99;
 }
 
 .modal.is-open {
@@ -30,10 +32,10 @@
   box-shadow: 0px 0px 30.7px 0px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   margin: 30px;
-  max-height: 90vh;
+  max-height: 80vh;
   max-width: 750px;
   overflow-y: auto;
-  padding: 75px;
+  padding: 40px;
 }
 
 /* Hide  scrollbar */
@@ -164,4 +166,11 @@
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
+}
+
+@media (min-width: 991px) {
+  .modal__container {
+    max-height: 90vh;
+    padding: 75px;
+  }
 }

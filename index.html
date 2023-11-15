@@ -12,12 +12,65 @@
     <main>
       <div class="content">
         <!-- Intro -->
-        <!-- <div id="intro">
-          <p>INTRO</p>
-        </div> -->
-        <!-- <iframe src=""></iframe> -->
-        <iframe src="https://cables.gl/view/650c9c83164dd3ab8b4d02da"></iframe>
+        <div id="intro">
+          <img
+            class="intro__circle"
+            alt=""
+            src="site/assets/intro-circle.svg"
+          />
+          <div class="intro__content">
+            <!-- Title -->
+            <h1>
+              <span class="sr-only"
+                >Macromicroscopio — Shifting scales in a heating world</span
+              >
+              <img src="site/assets/title.svg" aria-hidden="true" />
+            </h1>
 
+            <!-- Mobile warning -->
+            <div class="intro__mobile">
+              <img
+                src="site/assets/warning.svg"
+                height="50"
+                width="50"
+                alt=""
+                aria-hidden="true"
+              />
+              <p>
+                This project was designed for wide screens. Please access
+                through a wider monitor or proceed to read more about it.
+              </p>
+              <button data-micromodal-trigger="modal-1" class="modal-open">
+                Read more
+              </button>
+            </div>
+
+            <!-- Desktop content -->
+            <div class="intro__desktop">
+              <button id="enter_button">Enter</button>
+              <p class="instructions">
+                <span class="key">SPACEBAR</span> Play/Pause
+                <span class="key">↔</span>CLICK AND DRAG HORIZONTALLY Scrub
+                timeline <span class="key">R</span> Reset
+              </p>
+            </div>
+
+            <!-- Credits -->
+            <p class="intro__credits">
+              A project by
+              <a href="" rel="noopener noreferrer">Rodolfo Almeida</a> for
+              Information XYZ 2023.
+            </p>
+          </div>
+        </div>
+        <!-- <iframe src=""></iframe> -->
+        <iframe
+          id="cables"
+          class="hide"
+          src="https://cables.gl/view/650c9c83164dd3ab8b4d02da"
+        ></iframe>
+
+        <!-- Modal buttons -->
         <div class="buttons-container">
           <button data-micromodal-trigger="modal-1" class="modal-open">
             What am I looking at?
