@@ -52,6 +52,7 @@ main {
 }
 
 iframe {
+  background-color: greenyellow;
   border: 0px;
   position: absolute;
   height: 100%;
@@ -59,8 +60,28 @@ iframe {
 }
 
 /* Modals */
+.buttons-container {
+  bottom: 20px;
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  left: 20px;
+}
+
 .modal-open {
+  background-color: transparent;
+  border-radius: 100px;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  padding: 0.3rem 1.5rem;
   position: relative;
+  text-transform: uppercase;
+}
+
+.modal-open:hover,
+.modal-open:focus-visible {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Adjust content sizing */
