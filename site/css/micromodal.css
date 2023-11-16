@@ -35,7 +35,7 @@
   max-height: 80vh;
   max-width: 750px;
   overflow-y: auto;
-  padding: 40px;
+  padding: 30px;
 }
 
 /* Hide  scrollbar */
@@ -55,8 +55,7 @@
 
 .modal__title {
   box-sizing: border-box;
-  font-size: 1.25rem;
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.25;
   margin-bottom: 0;
@@ -172,5 +171,9 @@
   .modal__container {
     max-height: 90vh;
     padding: 75px;
+  }
+
+  .modal__title {
+    font-size: 4rem;
   }
 }
