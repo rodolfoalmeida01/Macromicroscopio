@@ -17,7 +17,16 @@ function start() {
   cables.classList.remove("hide");
 }
 
+function pressSpace(e) {
+  if (e.code !== "Space") {
+    return;
+  }
+
+  start();
+}
+
 enterButton.addEventListener("click", start);
+document.addEventListener("keydown", pressSpace);
 
 // Move intro dots
 const dots = document.querySelectorAll(".float");
