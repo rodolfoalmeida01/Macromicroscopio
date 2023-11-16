@@ -64,7 +64,9 @@ h3 {
 }
 
 a {
+  background-color: #ffe2cc;
   color: inherit;
+  text-decoration: none;
 }
 
 /* Layout */
