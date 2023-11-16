@@ -156,6 +156,19 @@ main {
   font-weight: 300;
 }
 
+.intro__mobile-video-container {
+  aspect-ratio: 16/9;
+  margin: 30px 0;
+  position: relative;
+  width: 100%;
+}
+
+.intro__mobile-video-container iframe {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
 .intro__desktop {
   display: none;
 }
