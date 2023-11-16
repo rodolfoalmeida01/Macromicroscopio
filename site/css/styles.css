@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: #000000;
+  background-color: #dfdfdf;
   margin: 0;
 }
 
@@ -257,6 +257,15 @@ main {
   width: 100%;
 }
 
+.cables-container {
+  border-radius: 20px;
+  box-shadow: 0 0 50px 0 #ccc;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 #cables {
   border: 0px;
   display: none;
@@ -283,7 +292,7 @@ main {
   display: flex;
   gap: 1rem;
   position: absolute;
-  left: 20px;
+  right: 20px;
 }
 
 /* Adjust content sizing */
