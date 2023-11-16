@@ -106,22 +106,20 @@ main {
   transition: visibility 0s linear 300ms, opacity 300ms;
 }
 
-#intro::before {
-  border-radius: 200px;
-  background-color: #fff;
-  filter: blur(80px);
-  -webkit-filter: blur(80px);
-  content: "";
-  height: 100%;
-  left: 0;
+#intro button {
+  padding: 0.75rem 3rem;
+}
+
+.intro__bkg--mobile,
+.intro__bkg--desktop {
+  height: 100vh;
   position: fixed;
-  top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: -1;
 }
 
-#intro button {
-  padding: 0.75rem 3rem;
+.intro__bkg--desktop {
+  display: none;
 }
 
 .intro__circle {
@@ -195,6 +193,12 @@ main {
 }
 
 @media (min-width: 991px) {
+  .intro__bkg--mobile {
+    display: none;
+  }
+  .intro__bkg--desktop {
+    display: block;
+  }
   .intro__content {
     gap: 30px;
     margin-top: 0;
