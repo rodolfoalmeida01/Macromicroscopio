@@ -21,10 +21,13 @@ enterButton.addEventListener("click", start);
 
 // Move intro dots
 const dots = document.querySelectorAll(".float");
-const random = () => [3, 2, 1, 0, -1, -2, -3][Math.floor(Math.random() * 3)];
+const random = () => (Math.random() * 8 - 4).toFixed(1);
 
 setInterval(() => {
-  dots.forEach((dot) => {
-    dot.style.transform = `translate(${random()}px, ${random()}px)`;
+  dots.forEach((dot, i) => {
+    const randomDelay = Math.random() * 350;
+    setTimeout(() => {
+      dot.style.transform = `translate(${random()}px, ${random()}px)`;
+    }, randomDelay);
   });
-}, 750);
+}, 500);
