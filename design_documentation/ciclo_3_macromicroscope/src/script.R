@@ -68,22 +68,35 @@ temperature_anual %>%
 # Criando a paleta de cores para a visualização das bolinhas
 pal_strip <- c("#08306b", "#08519c", "#2171b5", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#deebf7", "#fee0d2", "#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#a50f15", "#67000d")
 
-# Rescale os valores de temperatura para o intervalo [0,1]
+# Filtra timerange para 1950 em diante
 temperature_anual %>% 
   filter(year>=1950) -> temperature_anual
-temp_values <- rescale(temperature_anual$value)
 
-# Criar uma função de cores
-color_func <- grDevices::colorRampPalette(colors = pal_strip)
+# Define the custom color scale
+color_scale <- scale_color_gradientn(
+  colors = c("#08306b", "#FFFFFF", "#cb181d"),
+  values = scales::rescale(c(min(temperature_anual$value), 0, max(temperature_anual$value)))
+)
 
-# Mapear os valores de temperatura para as cores correspondentes na paleta de cores
-hex_codes <- color_func(length(temp_values))
+# Create a ggplot object without plotting
+gg <- ggplot(temperature_anual, aes(x = value, color = value)) +
+  color_scale
 
-# Crie a tabela de correspondência
+# Extract the color values
+color_values <- ggplot_build(gg)$data[[1]]$colour
+
+# Convert the color values to hex codes
+color_hex_codes <- scales::alpha(color_values, alpha = 1)
+
+# Add the "color" column to the dataframe
+temperature_anual$color <- color_hex_codes
+
+# Cria a tabela de correspondência
 correspondence_table <- data.frame(year = temperature_anual$year,
-                                   value = round(temperature_anual$value,2), 
-                                   hex_code = hex_codes
-                                   ) 
+                                    value = round(temperature_anual$value,2), 
+                                    hex_code = temperature_anual$color
+                                    ) 
+
 
 # Trabalhando com dados do Living Planet Index --------------------------------------
 
@@ -96,13 +109,18 @@ lpi$Binomial <- str_replace_all(lpi$Binomial,"_", " ")
 
 # CICLO 3 ---------------------------------------------------------------------------
 
+# Filtra só estudos com "número de individuos" como métrica
+# ISSO AQUI NÃO ESTÁ SENDO USADO, MAS PODE SER USADO PARA FILTRAR SÓ POR NUMERO DE INDIVIDUOS
+# lpi %>% 
+#   filter(Units == "Number of individuals") -> lpi_individuos
+
 # Cria uma checagem para ver quais os estudos com os maiores time ranges (maior sum de ano_preenchido)
 lpi %>% 
   mutate(ano_preenchido = case_when(is.na(value) ~ 0,
-                             TRUE ~ 1)) -> lpi_timetest
+                                    TRUE ~ 1)) -> lpi_timetest
 lpi_timetest %>% 
   group_by(ID, Citation, Class, Common_name, Method, Country) %>% 
-  summarise(timerange = sum(ano_preenchido), populacao_mediana = median(value, na.rm=T))
+  summarise(timerange = sum(ano_preenchido), populacao_mediana = median(value, na.rm=T)) -> lpi_timetest
 
 # Cria lista de espécies selecionadas dali a partir do ID (seleção feita manualmente considerando diversidade geográfica, de classe, métodos de população via indivíduos e grandes timeranges)
 selecionadas <- c(2092, 
@@ -122,6 +140,20 @@ selecionadas <- c(2092,
                   2086
 )
 
+# # Cria nova lista de espécies selecionadas só com números de indivíduos
+# selecionadas_individuos <- c(10392,
+#                   27913,
+#                   12074,
+#                   12221,
+#                   539,
+#                   27830,
+#                   14848,
+#                   11886,
+#                   
+#                   
+#                   
+# )
+
 # Prepara DF temperature, tira a média das medições mensais, junta com os hexadecimais de cor
 temperature %>% 
   select(year, value) %>% 
@@ -134,7 +166,7 @@ left_join(j_temperature, correspondence_table, 'year') %>%
   select(year, temp_anomaly_celsius, hex_code) -> j_temperature
 
 # Prepara DF lpi_timetest e filtra espécies
-lpi_timetest %>% 
+lpi %>% 
   select(ID, Binomial, Common_name, Class, Method, Units, value, ano, Country) %>% 
   rename(id = ID, name = Binomial, common_name = Common_name, class = Class, method = Method, units = Units, population_count = value, year = ano, country=Country) %>% 
   filter(id %in% selecionadas) -> j_lpi
@@ -198,6 +230,10 @@ petri_untidy_point <- petri_untidy %>%
   pivot_wider(id_cols = c(name, common_name), names_from = point_year, values_from = points)
 
 left_join(petri_untidy_pop, petri_untidy_point, by=c('name','common_name')) -> petri_untidy
+
+# Acrescenta sinal de positivo em valores > 0
+correspondence_table$value <- sprintf("%+f", correspondence_table$value)
+correspondence_table$value <- gsub('.{4}$', '', correspondence_table$value)
 
 # ESCREVE CSVs PARA ARIEL
 write.csv(petri_untidy, 'petri_sample.csv')
