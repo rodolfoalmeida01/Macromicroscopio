@@ -7,6 +7,7 @@ MicroModal.init({
   },
 });
 
+// Intro
 const enterButton = document.querySelector("#enter_button");
 const intro = document.querySelector("#intro");
 const cables = document.querySelector("#cables");
@@ -17,3 +18,13 @@ function start() {
 }
 
 enterButton.addEventListener("click", start);
+
+// Move intro dots
+const dots = document.querySelectorAll(".float");
+const random = () => [3, 2, 1, 0, -1, -2, -3][Math.floor(Math.random() * 3)];
+
+setInterval(() => {
+  dots.forEach((dot) => {
+    dot.style.transform = `translate(${random()}px, ${random()}px)`;
+  });
+}, 750);

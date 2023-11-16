@@ -148,6 +148,14 @@ main {
   margin: 0;
 }
 
+#intro h1 svg {
+  max-width: 100%;
+}
+
+#intro h1 .float {
+  transition: transform 750ms linear;
+}
+
 .intro__mobile {
   align-items: center;
   display: flex;
